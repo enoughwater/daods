@@ -1,0 +1,86 @@
+body{
+    background-color: rgb(37, 37, 37);
+    color: aliceblue;
+    font-family: "Crimson Text", "Times New Roman", serif;
+    font-size: 120%;
+}
+.class1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: rgb(12, 12, 12);
+    background-color: rgb(12, 12, 12);
+    border-width: thick;
+    border-radius: 10px;
+}
+.class2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: thick;
+    border-radius: 10px;
+    border-color: aliceblue;
+    background-color: aliceblue;
+}
+.padding{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.black{
+    color: #000;
+}
+.center{
+    text-align: center;
+}
+.dflex{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.class3 {
+  margin: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+
+
+
+
+table {
+    table-layout: fixed;
+    width: 500px;
+    border-collapse: collapse;
+}
+
+table th,table td {
+    background-color: gray;
+}
+
+th, td {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+td input[type="text"] {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+}
+
+td input[type="text"]:focus {
+    outline: none;
+}
