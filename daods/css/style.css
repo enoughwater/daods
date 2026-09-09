@@ -9,6 +9,7 @@ body{
     text-decoration: none;
     font-family: "Montserrat";
 }
+
 .class1{
     display: block;
     margin-left: auto;
@@ -96,11 +97,6 @@ td input[type="text"]:focus {
 .lblinput{
     margin-top: 25px;
 }
-
-
-
-
-
 .cabecalho{
     border-color: rgb(25, 25, 25);
     background-color: rgb(25, 25, 25);
