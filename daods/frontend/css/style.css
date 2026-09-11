@@ -1,0 +1,161 @@
+body {
+    background-image: url("../img/background1.png");
+    background-repeat: no-repeat;
+    background-color: #101010;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 120%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.class1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: rgb(12, 12, 12);
+    background-color: rgb(12, 12, 12);
+    border-width: thick;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+}
+.class2{
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    margin-top: auto;
+    justify-content: center;
+}
+.inputmargin{
+    margin-top: 150px;
+    padding: 10px 20px;
+}
+.inputlogin{
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+}
+form button{
+    margin-top: 25px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+    color: black;
+}
+form button:hover{
+    background-color: #bdbbbb;
+}
+
+
+
+
+.plan {
+    margin: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    width: 500px;
+}
+table{
+    table-layout: fixed;
+    width: 500px;
+    border-collapse: collapse;
+}
+table th,table td {
+    background-color: gray;
+}
+th, td {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+td input[type="text"] {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+}
+td input[type="text"]:focus {
+    outline: none;
+}
+.lblinput{
+    margin-top: 25px;
+}
+
+
+
+
+
+.cabecalho{
+    border-color: rgb(25, 25, 25);
+    background-color: rgb(25, 25, 25);
+    height: 30px;
+    padding: 5px;
+    margin: -10px;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color:wheat
+}
+.sidebar{
+    border-color: rgb(12, 12, 12);
+    background-color: rgb(12, 12, 12);
+    margin: 0px;
+    width: 250px;
+    padding: 20px;
+    height:100%;
+    position: fixed;
+}
+.sidebar ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.sidebar ul li a
+{
+    color:#bbb;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+}
+.sidebar ul li a:hover {
+  color: #fff;
+}
+.sidebar ul li p
+{
+    color:#727272;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  height: 100px;
+}
+.content {
+    margin:10px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+}
