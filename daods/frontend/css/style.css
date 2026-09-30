@@ -9,8 +9,8 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-
+ 
+ 
 .class1{
     display: block;
     margin-left: auto;
@@ -54,10 +54,10 @@ form button{
 form button:hover{
     background-color: #bdbbbb;
 }
-
-
-
-
+ 
+ 
+ 
+ 
 .plan {
     margin: 10px;
     margin-bottom: 20px;
@@ -98,11 +98,11 @@ td input[type="text"]:focus {
 .lblinput{
     margin-top: 25px;
 }
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 .cabecalho{
     border-color: rgb(25, 25, 25);
     background-color: rgb(25, 25, 25);
@@ -123,6 +123,9 @@ a{
     padding: 20px;
     height:100%;
     position: fixed;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.25s ease;
 }
 .sidebar ul {
   list-style: none;
@@ -158,4 +161,61 @@ a{
     margin:10px;
     margin-left: 260px;
     width: calc(100% - 260px);
+    transition: margin-left 0.25s ease, width 0.25s ease;
+}
+ 
+ 
+
+
+
+
+.toggle-sidebar {
+    position: fixed;
+    top: 8px;
+    left: 208px;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(12, 12, 12);
+    color: #bbb;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: left 0.25s ease, color 0.15s ease, background-color 0.15s ease;
+}
+.toggle-sidebar:hover {
+    color: #fff;
+    background-color: rgb(30, 30, 30);
+}
+.toggle-sidebar:focus-visible {
+    outline: 2px solid wheat;
+    outline-offset: 2px;
+}
+.sidebar h2,
+.sidebar ul {
+    transition: opacity 0.2s ease;
+}
+.container.collapsed .sidebar {
+    width: 50px;
+}
+.container.collapsed .sidebar h2,
+.container.collapsed .sidebar ul {
+    opacity: 0;
+    pointer-events: none;
+}
+.container.collapsed .content {
+    margin-left: 60px;
+    width: calc(100% - 70px);
+}
+.container.collapsed .toggle-sidebar {
+    left: 9px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .sidebar, .content, .toggle-sidebar {
+        transition: none;
+    }
 }
