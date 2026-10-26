@@ -1,3 +1,2 @@
 $ gitignore
-#ignorar
-daods/backend/keys.env
+.env
