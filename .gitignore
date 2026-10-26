@@ -1,2 +1,1 @@
-/daods/backend/keys.env
-/daods/keys.env
+*.env
