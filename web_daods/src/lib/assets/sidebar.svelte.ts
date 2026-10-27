@@ -1,0 +1,1 @@
+export const sidebar = $state({ collapsed: false });

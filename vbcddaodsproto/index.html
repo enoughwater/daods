@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Grade de Horários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+  <header>
+    <div>
+      <h1>Grade de Horários</h1>
+      <p class="sub">Edite células · Pinte fundos e cores de texto</p>
+    </div>
+    <div class="dark-btn" onclick="toggleDark()">
+      <div class="track"><div class="thumb"></div></div>
+      Modo escuro
+    </div>
+  </header>
+
+  <!-- Toolbar: linhas/colunas -->
+  <div class="toolbar">
+    <button class="btn" onclick="addRow()">+ Linha</button>
+    <button class="btn" onclick="removeRow()">− Linha</button>
+    <button class="btn" onclick="addCol()">+ Coluna</button>
+    <button class="btn btn-red" onclick="clearAll()">Limpar tudo</button>
+    <div class="vsep"></div>
+    <div class="row-ctrl">
+      <label for="nrows">Linhas:</label>
+      <input type="number" id="nrows" min="1" max="50" value="6" onchange="setRows(this.value)">
+    </div>
+  </div>
+
+  <!-- Mode strip -->
+  <div class="mode-strip">
+
+    <!-- Mode toggle button -->
+    <button class="mode-toggle" id="mode-toggle-btn" onclick="cycleMode()" title="Clique para trocar o modo">
+      <div class="mode-dot" id="mode-dot"></div>
+      <span id="mode-toggle-lbl">Modo: Edição</span>
+    </button>
+
+    <div class="vsep"></div>
+
+    <!-- Color controls — only visible outside edit mode -->
+    <div class="paint-controls" id="paint-controls">
+
+      <!-- color picker -->
+      <div class="picker-wrap">
+        <input type="color" id="color-picker" value="#bbf7d0"
+          oninput="onColorChange(this.value)"
+          onchange="onColorChange(this.value)"
+          title="Escolher cor">
+        <span class="hex-tag" id="hex-tag">#bbf7d0</span>
+      </div>
+
+      <div class="vsep"></div>
+
+      <!-- eraser: appears only in bg-paint or txt-paint mode -->
+      <button class="eraser-btn" id="eraser-btn" onclick="toggleErase()">
+        🧹 Borracha
+      </button>
+
+    </div>
+
+    <div class="vsep" id="badge-sep"></div>
+
+    <!-- mode badge -->
+    <span class="mode-badge badge-edit" id="mode-badge">✏️ Edição</span>
+    <span id="mode-tip" style="font-size:12px;color:var(--txt3)">Clique no botão para entrar no modo pintura</span>
+
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr id="thead-row"></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="status">
+    <b id="stat">0 células preenchidas</b>
+    <span>Tab · Enter · ↑↓ para navegar</span>
+  </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
