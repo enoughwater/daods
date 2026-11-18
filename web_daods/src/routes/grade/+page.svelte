@@ -34,6 +34,10 @@
     .content__items {
         padding: 20px;
     }
+    a{
+        text-decoration: none;
+        color:wheat
+    }
 </style>
 
 
