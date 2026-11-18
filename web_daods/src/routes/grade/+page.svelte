@@ -42,57 +42,7 @@
         <p class="cabecalho" class:collapsed={sidebar.collapsed}>Nova Grade</p>
         <div class="content__items">
             <h2>Quase nada a ver aqui</h2>
-            <div class="plan center">
-                <table>
-                    <thead>
-                        <tr>
-                            <th> </th>
-                            <th>A</th>
-                            <th>B</th>
-                            <th>C</th>
-                            <th>D</th>
-                            <th>E</th>
-                        </tr>
-                    </thead>
-                    <thead>
-                        <tr>
-                            <td>1</td>
-                            <td><input type="text" name="A1"></td>
-                            <td><input type="text" name="A2"></td>
-                            <td><input type="text" name="A3"></td>
-                            <td><input type="text" name="A4"></td>
-                            <td><input type="text" name="A5"></td></tr>
-                        <tr>
-                            <td>2</td>
-                            <td><input type="text" name="B1"></td>
-                            <td><input type="text" name="B2"></td>
-                            <td><input type="text" name="B3"></td>
-                            <td><input type="text" name="B4"></td>
-                            <td><input type="text" name="B5"></td></tr>
-                        <tr>
-                            <td>3</td>
-                            <td><input type="text" name="C1"></td>
-                            <td><input type="text" name="C2"></td>
-                            <td><input type="text" name="C3"></td>
-                            <td><input type="text" name="C4"></td>
-                            <td><input type="text" name="C5"></td></tr>
-                        <tr>
-                            <td>4</td>
-                            <td><input type="text" name="D1"></td>
-                            <td><input type="text" name="D2"></td>
-                            <td><input type="text" name="D3"></td>
-                            <td><input type="text" name="D4"></td>
-                            <td><input type="text" name="D5"></td></tr>
-                        <tr>
-                            <td>5</td>
-                            <td><input type="text" name="E1"></td>
-                            <td><input type="text" name="E2"></td>
-                            <td><input type="text" name="E3"></td>
-                            <td><input type="text" name="E4"></td>
-                            <td><input type="text" name="E5"></td></tr>
-                    </thead>
-                </table>
-            </div>
+            <a href="/novagrade">Criar nova grade</a>
         </div>
     </main>
     <Background></Background>

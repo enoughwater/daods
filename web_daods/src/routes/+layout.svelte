@@ -6,10 +6,9 @@
     const links = [
         { href: '/', label: 'Início' },
         { href: '/dashboard-professor', label: 'Dashboard' },
-        { href: '/grade', label: 'Nova Grade' },
-        { href: '/user', label: 'Perfil' },
+        { href: '/grade', label: 'Grade' },
         { href: '/notificacoes', label: 'Notificações' },
-        { href: '/configuracao', label: 'Configurações' }
+        { href: '/configuracao', label: 'Configurações' },
     ];
     function isActive(href: string) {
         const path = page.url.pathname;
@@ -60,7 +59,15 @@
                 </li>
             {/each}
         </ul>
+        <a href="/user" class="profile" class:active={isActive('/user')}>
+            <img class="avatar" src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Foto de perfil" />
+            <div class="info">
+                <strong>Nome</strong>
+                <span>@usuario</span>
+            </div>
+        </a>
     </aside>
+    
     <main class="content">
         {@render children()}
     </main>
@@ -72,6 +79,45 @@
 
 
 <style>
+    .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    color: #bbb;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    }
+    .profile:hover,
+    .profile.active {
+        color: #fff;
+        background-color: rgb(40, 40, 40);
+    }
+
+    .avatar {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+        min-width: 0;
+    }
+
+    .info span {
+        font-size: 0.8rem;
+        opacity: 0.7;
+    }
+    .container.collapsed .profile {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     :global(*) {
         font-family: "Montserrat", sans-serif;
         margin: 0;
@@ -107,10 +153,13 @@
         overflow: hidden;
         white-space: nowrap;
         transition: width 0.25s ease;
+        display: flex;
+        flex-direction: column;
     }
     .sidebar ul {
         list-style: none;
         margin-top: 20px;
+        flex: 1;
     }
     .sidebar ul li a {
         color: #bbb;

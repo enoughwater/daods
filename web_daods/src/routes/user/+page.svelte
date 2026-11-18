@@ -1,8 +1,4 @@
 <style>
-    h2 {
-        font-family: "Montserrat", sans-serif;
-        box-sizing: border-box;
-    }
     .cabecalho {
         color: aliceblue;
         background-color: rgb(25, 25, 25);
@@ -38,12 +34,51 @@
         text-decoration: none;
         color:wheat
     }
+
+
+    .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    color: aliceblue;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    }
+    .avatar {
+        width: 25vh;
+        height: 25vh;
+        flex-shrink: 0;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .avatar:hover{
+        color: #fff;
+        background-color: rgb(40, 40, 40);
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+        min-width: 0;
+    }
+    strong{
+        font-size: 10vh;
+    }
 </style>
 <div class="container" id="container">
     <main class="content">
         <p class="cabecalho" class:collapsed={sidebar.collapsed}>Perfil</p>
         <div class="content__items">
-            <h2>Quase nada a ver aqui</h2>
+            <div class="profile">
+                <img class="avatar" src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="Foto de perfil" />
+                <div class="info">
+                    <strong>Nome</strong>
+                    <span>@usuario</span>
+                </div>
+            </div>
+            <a href="/"><br>Trocar senha</a>
             <a href="/login"><br>Sair da conta</a>
         </div>
     </main>
